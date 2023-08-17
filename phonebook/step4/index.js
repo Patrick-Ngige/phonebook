@@ -57,7 +57,8 @@ app.get('/info', (request, response) => {
     response.send(infoDetails)
 })
 
-app.get('/api/persons/:id', (request, response) => {
+app.delete('/api/persons/:id', (request, response) => {
+  const id = Number(request.params.id)
   
 })
 
