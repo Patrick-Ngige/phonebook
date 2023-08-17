@@ -32,7 +32,6 @@ app.get('/api/persons', (request, response) => {
 })
 
 //displaying the time the request was received
-
 app.get('/info', (request, response) => {
     const currenTime = new Date().toString()
     const numEntries = persons.length
@@ -43,9 +42,10 @@ app.get('/info', (request, response) => {
     <p>${currenTime}</p>
     </div>
     `
+    response.send(infoDetails)
 })
 
-const PORT = 3001
+const PORT = 3002
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)
 })
