@@ -4,7 +4,9 @@ const app = express()
 
 app.use(express.json())
 
-app.use(morgan('tiny'))
+app.use(morgan('combined'))
+
+
 
 let persons = [
     { 
@@ -74,6 +76,8 @@ app.post('/api/persons', (request, response) => {
     }
 
     persons = persons.concat(person)
+
+    console.log('Request Data:', JSON.stringify(request.body))
 
     response.json(person) 
 })
