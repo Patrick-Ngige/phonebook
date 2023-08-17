@@ -84,7 +84,7 @@ app.get('/info', (request, response) => {
 app.delete('/api/persons/:id', (request, response) => {
     const id = Number(request.params.id)
     persons = persons.filter(person => person.id !== id)
-    response.status(204).end() // Corrected status code to 204
+    response.status(204).end() 
 })
 
 const PORT = 3001
